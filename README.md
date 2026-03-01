@@ -1,7 +1,7 @@
-# SpaceDock-home-assignment-
+# SpaceDock-home-assignment
 author: Jakub Stejskal
 
-
+**Assignment 1 - Epic and user story overview **
 ## 🛰️ EPIC 1 — Ship Traffic Monitoring
 
 **Goal**  

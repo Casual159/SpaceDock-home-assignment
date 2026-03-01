@@ -195,3 +195,4 @@ Inform stakeholders about critical workflow events.
 - What is the reference point of the coordinates? Where is the point 0,0,0 (X,Y,Z) How is the space around the station systemized?
 - Reguarding quarantine state - Should it be applied automatically when any of the warning are detected, or is it approved by the director
 - Reguarding request once per day - Is it 24h from the last request or within "a day" on the spacestation? What is the reference.
+- How does the scan work. What things does it scan at what distance. Does it scan the ship`s crew as well? 

@@ -188,7 +188,15 @@ Inform stakeholders about critical workflow events.
 ## Assignment 3 - Entity relationship model
 ![ERD diagram](Spacedock_ERD.drawio.png)
 
-4. --
+## Assignment 4 - BPMN landing request workflow
+
+Assumptions:
+- Scan only detects potential warnings
+- Freight manifest and roster need to be passed passed and confirmed by the captain
+- System displays automatically known/unknown status, warnings, 24 hour rule assesment
+- Spacetrafic controller reviews checklist 
+- if Director is involved, he sees controllers view but calls the final decission
+![ERD diagram](Spacedock BPMN.drawio.png)
 
 ## Assignment 5 - Questions for the customer
 - What are the scale characteristics reguarding: number of ships monitored, number of paralel docking ships, number of docking ports, number of existing spacetraffic controllers)

@@ -186,6 +186,8 @@ Inform stakeholders about critical workflow events.
 - immutability of audit log (requests and decissions) 
 
 ## Assignment 3 - Entity relationship model
+Assumptions:
+- flight history track the records of a person across stations vs flights track flights for the one spacestation
 ![ERD diagram](Spacedock_ERD.drawio.png)
 
 ## Assignment 4 - BPMN landing request workflow
@@ -205,4 +207,4 @@ Assumptions:
 - Where does space traffic controller get the ships frequency and encryption codes without the ship explicitly passing them? (How can he initiate voice communication)
 - Reguarding quarantine state - Should it be applied automatically when any of the warning are detected, or is it approved by the director
 - Reguarding request once per day - Is it 24h from the last request or within "a day" on the spacestation? What is the reference.
-- How does the scan work. What things does it scan at what distance. Does it scan the ship`s crew, cargo,... as well? 
+- How does the scan work. What things does it scan at what distance. Does it scan the ship`s crew, cargo, as well? 

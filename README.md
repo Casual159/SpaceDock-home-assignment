@@ -1,7 +1,7 @@
 # SpaceDock-home-assignment
 author: Jakub Stejskal
 
-**Assignment 1 - Epic and user story overview **
+## Assignment 1 - Epic and user story overview
 ## 🛰️ EPIC 1 — Ship Traffic Monitoring
 
 **Goal**  
@@ -176,11 +176,22 @@ Inform stakeholders about critical workflow events.
 
 **Actors**
 - Station Director (tablet / communicator)
-2. Non-functional requirements
 
-3. Entity relationship model
+## Assignment 2 - Non-functional requirements
+
+- 24/7/365 uptime -> standby backup sollution in case of blackout/failure/downtime (narrow and controlled downtimes)
+- scaling (number of ships monitored, number of paralel dockings if not 1 at a time) - TODO - need to ask the customer
+- resposivness - detection, scan result, ship status need to be readable ASAP (e.g. under 1 second), approvals should propagate within few seconds, communications should be streamed
+- strict role based access to most interfaces and actions
+- immutability of audit log (requests and decissions) 
+
+## Assignment 3 - Entity relationship model
 ![ERD diagram](Spacedock_ERD.drawio.png)
 
 4. --
 
-5. Questions for the customer
+## Assignment 5 - Questions for the customer
+- What are the scale characteristics reguarding: number of ships monitored, number of paralel docking ships, number of docking ports, number of existing spacetraffic controllers)
+- What is the reference point of the coordinates? Where is the point 0,0,0 (X,Y,Z) How is the space around the station systemized?
+- Reguarding quarantine state - Should it be applied automatically when any of the warning are detected, or is it approved by the director
+- Reguarding request once per day - Is it 24h from the last request or within "a day" on the spacestation? What is the reference.

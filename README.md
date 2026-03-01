@@ -192,16 +192,17 @@ Inform stakeholders about critical workflow events.
 
 Assumptions:
 - Scan only detects potential warnings
-- Freight manifest and roster need to be passed passed and confirmed by the captain
-- System displays automatically known/unknown status, warnings, 24 hour rule assesment
-- Spacetrafic controller reviews checklist 
+- Freight manifest and roster need to be passed and confirmed by the captain
+- System displays automatically known/unknown status (so it has to be able to asess it - detect it), warnings, 24 hour rule assesment
+- Spacetrafic controller reviews checklist and approves if the checklist is passed
 - if Director is involved, he sees controllers view but calls the final decission
+- there possible variants to the communication procedure and further answers are needed  -- TODO ask customer to walk through the how the communication is expeted to happen (for example wheather voice transmission is used in all cases? Or if the communication can be resolved via automated checklist sequence just with "click confirm" approval by controllers if everything checkes
 
 ![BPMN diagram](Spacedock_BPMN.drawio.png)
 
 ## Assignment 5 - Questions for the customer
 - What are the scale characteristics reguarding: number of ships monitored, number of paralel docking ships, number of docking ports, number of existing spacetraffic controllers)
-- What is the reference point of the coordinates? Where is the point 0,0,0 (X,Y,Z) How is the space around the station systemized?
+- Where does space traffic controller get the ships frequency and encryption codes without the ship explicitly passing them? (How can he initiate voice communication)
 - Reguarding quarantine state - Should it be applied automatically when any of the warning are detected, or is it approved by the director
 - Reguarding request once per day - Is it 24h from the last request or within "a day" on the spacestation? What is the reference.
-- How does the scan work. What things does it scan at what distance. Does it scan the ship`s crew as well? 
+- How does the scan work. What things does it scan at what distance. Does it scan the ship`s crew, cargo,... as well? 

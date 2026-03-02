@@ -185,12 +185,17 @@ Inform stakeholders about critical workflow events.
 - strict role based access to most interfaces and actions
 - immutability of audit log (requests and decissions) 
 
-## Assignment 3 - Entity relationship model
+## Assignment 3 - State diagram
+Assumtions:
+The actual ship status is directed by request status(es) and warning detection
+
+
+## Assignment 4 - Entity relationship model
 Assumptions:
 - flight history track the records of a person across stations vs flights track flights for the one spacestation
-![ERD diagram](Spacedock_ERD.drawio.png)
+![state diagram](Spacedock_state.drawio.png)
 
-## Assignment 4 - BPMN landing request workflow
+## Assignment 5 - BPMN landing request workflow
 
 Assumptions:
 - Scan only detects potential warnings
@@ -202,7 +207,7 @@ Assumptions:
 
 ![BPMN diagram](Spacedock_BPMN.drawio.png)
 
-## Assignment 5 - Questions for the customer
+## Assignment 6 - Questions for the customer
 - What are the scale characteristics reguarding: number of ships monitored, number of paralel docking ships, number of docking ports, number of existing spacetraffic controllers)
 - Where does space traffic controller get the ships frequency and encryption codes without the ship explicitly passing them? (How can he initiate voice communication)
 - Reguarding quarantine state - Should it be applied automatically when any of the warning are detected, or is it approved by the director

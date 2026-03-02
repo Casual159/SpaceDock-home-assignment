@@ -210,6 +210,6 @@ Assumptions:
 ## Assignment 6 - Questions for the customer
 - What are the scale characteristics reguarding: number of ships monitored, number of paralel docking ships, number of docking ports, number of existing spacetraffic controllers)
 - Where does space traffic controller get the ships frequency and encryption codes without the ship explicitly passing them? (How can he initiate voice communication)
-- Reguarding quarantine state - Should it be applied automatically when any of the warning are detected, or is it approved by the director
+- Reguarding quarantine state - Should it be applied automatically when any of the warning are detected, or is it approved by the director? What does it mean when ship is "in flight + quarantined" vs "docked + quarantined"
 - Reguarding request once per day - Is it 24h from the last request or within "a day" on the spacestation? What is the reference.
 - How does the scan work. What things does it scan at what distance. Does it scan the ship`s crew, cargo, as well? 

@@ -177,6 +177,48 @@ Inform stakeholders about critical workflow events.
 **Actors**
 - Station Director (tablet / communicator)
 
+
+## Assignment 1B - Detailed user story
+
+**Detailed User Story 2 — Review Checklist & Approve/Deny Docking (Controller)**
+
+Epic: EPIC 3  ￼
+As a Space Traffic Controller
+I want review a docking request with system-provided checklist (schedule, scan warnings, 24h rule, manifest/roster confirmation)
+So that I can approve or deny docking safely and consistently
+
+**Preconditions**
+	•	Docking request exists in SUBMITTED (or PENDING_REVIEW) state.
+
+**Main Flow**
+	1.	Controller opens request detail.
+	2.	System shows checklist:
+	•	24-hour rule evaluation result
+	•	schedule match (scheduled/unscheduled)
+	•	scan warnings: explosives / alien infestation / reactor leakage (from monitoring).  ￼
+	•	manifest/roster confirmation status  ￼
+	3.	Controller decides Approve or Deny with reason.
+	4.	System:
+	•	stores decision + immutable audit event
+	•	transitions request to APPROVED or DENIED
+	•	triggers next steps:
+	•	if APPROVED and SCHEDULED: request can proceed to docking operations
+	•	if UNSCHEDULED: routes for Director final approval (see Story 3)
+
+**Acceptance Criteria**
+	•	AC1 — Decision logged
+	•	When controller approves/denies
+	•	Then request status updates and an audit event is written.
+	•	AC2 — Warnings visibility
+	•	Given scan warnings exist for ship
+	•	When controller opens request
+	•	Then warnings are shown clearly and influence checklist result.
+	•	AC3 — No action after terminal
+	•	Given request is already DENIED or COMPLETED
+	•	When controller attempts another decision
+	•	Then system blocks it (or forces “decision change” via Story 4).
+
+
 ## Assignment 2 - Non-functional requirements
 
 - 24/7/365 uptime -> standby backup sollution in case of blackout/failure/downtime (narrow and controlled downtimes)
@@ -211,6 +253,6 @@ Assumptions:
 ## Assignment 6 - Questions for the customer
 - What are the scale characteristics reguarding: number of ships monitored, number of paralel docking ships, number of docking ports, number of existing spacetraffic controllers)
 - Where does space traffic controller get the ships frequency and encryption codes without the ship explicitly passing them? (How can he initiate voice communication)
-- Reguarding quarantine state - Should it be applied automatically when any of the warning are detected, or is it approved by the director? What does it mean when ship is "in flight + quarantined" vs "docked + quarantined"
+- Is voice communication required or can regular flights can be dispatched without direct connection (e.g. scan with zero warnings + full automatic identification + scheduled flight pairing = docking approved)
 - Reguarding request once per day - Is it 24h from the last request or within "a day" on the spacestation? What is the reference.
-- How does the scan work. What things does it scan at what distance. Does it scan the ship`s crew, cargo, as well? 
+- How does the scan work. Do we rely oe "one general scan" or is agregate of many observation (say visual + xray)? What things does it scan at what distance. Does it scan the ship`s crew, cargo, as well? 

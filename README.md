@@ -193,6 +193,7 @@ The actual ship status is directed by request status(es) and warning detection
 ## Assignment 4 - Entity relationship model
 Assumptions:
 - flight history track the records of a person across stations vs flights track flights for the one spacestation
+  
 ![ERD diagram](Spacedock_ERD.drawio.png)
 
 ## Assignment 5 - BPMN landing request workflow

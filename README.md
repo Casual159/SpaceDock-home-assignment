@@ -188,12 +188,12 @@ Inform stakeholders about critical workflow events.
 ## Assignment 3 - State diagram
 Assumtions:
 The actual ship status is directed by request status(es) and warning detection
-
+![state diagram](Spacedock_state.drawio.png)
 
 ## Assignment 4 - Entity relationship model
 Assumptions:
 - flight history track the records of a person across stations vs flights track flights for the one spacestation
-![state diagram](Spacedock_state.drawio.png)
+![ERD diagram](Spacedock_ERD.drawio.png)
 
 ## Assignment 5 - BPMN landing request workflow
 

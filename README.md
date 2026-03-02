@@ -204,7 +204,7 @@ Automated test coverage for:
 - can change mind if the ship breaks "once per day" rule
 - can change mind if the ship if the ship is unknown
 - can change mind if is not scheduled
-- can change mind before docking port is assigned
+- can change mind after docking port is assigned (but ship not docked)
 - can change mind if the ship is quarantined
 
 

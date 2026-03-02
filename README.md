@@ -180,43 +180,32 @@ Inform stakeholders about critical workflow events.
 
 ## Assignment 1B - Detailed user story
 
-**Detailed User Story 2 — Review Checklist & Approve/Deny Docking (Controller)**
+**Epic: EPIC 3**  ￼
+As a Controller (or Director for unscheduled)
+I want change my approval decision before physical docking/departure starts
+So that I can react to new info (late scan warning, manifest mismatch, etc.)
 
-Epic: EPIC 3  ￼
-As a Space Traffic Controller
-I want review a docking request with system-provided checklist (schedule, scan warnings, 24h rule, manifest/roster confirmation)
-So that I can approve or deny docking safely and consistently
-
-**Preconditions**
-	•	Docking request exists in SUBMITTED (or PENDING_REVIEW) state.
-
-**Main Flow**
-	1.	Controller opens request detail.
-	2.	System shows checklist:
-	•	24-hour rule evaluation result
-	•	schedule match (scheduled/unscheduled)
-	•	scan warnings: explosives / alien infestation / reactor leakage (from monitoring).  ￼
-	•	manifest/roster confirmation status  ￼
-	3.	Controller decides Approve or Deny with reason.
-	4.	System:
-	•	stores decision + immutable audit event
-	•	transitions request to APPROVED or DENIED
-	•	triggers next steps:
-	•	if APPROVED and SCHEDULED: request can proceed to docking operations
-	•	if UNSCHEDULED: routes for Director final approval (see Story 3)
+**Business Rules**
+- Allowed only if ship is not yet docked / not yet departed and request is not COMPLETED.
+- Every change must create a new audit entry (do not overwrite history).
 
 **Acceptance Criteria**
-	•	AC1 — Decision logged
-	•	When controller approves/denies
-	•	Then request status updates and an audit event is written.
-	•	AC2 — Warnings visibility
-	•	Given scan warnings exist for ship
-	•	When controller opens request
-	•	Then warnings are shown clearly and influence checklist result.
-	•	AC3 — No action after terminal
-	•	Given request is already DENIED or COMPLETED
-	•	When controller attempts another decision
-	•	Then system blocks it (or forces “decision change” via Story 4).
+- AC1 — Decision change recorded
+- When decision is changed
+- Then previous decision remains visible in audit trail and new decision becomes current.
+- AC2 — Block after docking
+- Given ship already entered DOCKED (or docking operation started)
+- When user attempts to change decision
+- Then system rejects with reason.
+
+**DoD**
+Automated test coverage for: 
+- role based access - e.g. controller cannot change decission of a director
+- can change mind if the ship breaks "once per day" rule
+- can change mind if the ship if the ship is unknown
+- can change mind if is not scheduled
+- can change mind before docking port is assigned
+- can change mind if the ship is quarantined
 
 
 ## Assignment 2 - Non-functional requirements
